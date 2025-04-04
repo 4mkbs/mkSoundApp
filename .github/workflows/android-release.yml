@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew assembleRelease --stacktrace
 
       - name: Upload APK/AAB as Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-release
           path: app/build/outputs/apk/release/*.apk
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download APK/AAB Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: app-release
           path: app/build/outputs/apk/release/
