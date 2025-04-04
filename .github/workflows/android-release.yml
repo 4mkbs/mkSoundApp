@@ -17,7 +17,11 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'adoptopenjdk'
+          distribution: 'temurin'  # Change this line to use 'temurin'
+          java-package: jdk
+          architecture: x64
+          check-latest: false
+
 
       - name: Set up Gradle
         uses: gradle/wrapper-validation-action@v1
@@ -31,6 +35,6 @@ jobs:
           files: |
             app/build/outputs/bundle/release/app-release.aab  # Path to your AAB file
             # Uncomment and modify the following line if you want to upload APK as well
-            # app/build/outputs/apk/release/app-release.apk
+            app/build/outputs/apk/release/app-release.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
