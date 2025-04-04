@@ -7,6 +7,7 @@ plugins {
 }
 
 android {
+    println("🔧 CI = ${System.getenv("CI")}")
     namespace = "mkbs.sound.mksound"
     compileSdk = 35
 
@@ -20,6 +21,7 @@ android {
             } else {
                 val keystoreProperties = Properties().apply {
                     load(File(rootDir, "keystore.properties").inputStream())
+//                    load(FileInputStream(File(rootDir, "keystore.properties")))
                 }
 
                 storeFile = file(keystoreProperties["storeFile"] as String)
@@ -52,7 +54,6 @@ android {
             )
         }
     }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11

@@ -31,8 +31,9 @@ build/
 *.ap_
 
 # Keystore file (Never upload your keystore!)
-*.jks
+keystore.properties
 /app/my-release-key.jks
+*.jks
 # Native files
 *.so
 
