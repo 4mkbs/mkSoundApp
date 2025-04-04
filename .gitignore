@@ -1,0 +1,44 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Gradle files
+.gradle/
+build/
+**/build/
+
+# Android Studio files
+.idea/
+
+
+# Generated files
+*.log
+*.hprof
+*.apk
+*.aab
+*.ap_
+
+# Keystore file (Never upload your keystore!)
+*.jks
+/app/my-release-key.jks
+# Native files
+*.so
+
+# OS specific files (Windows, macOS, Linux)
+Thumbs.db
+
+# Dependency directories
+
+maven/
